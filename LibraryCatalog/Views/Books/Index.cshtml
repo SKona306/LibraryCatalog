@@ -1,0 +1,27 @@
+@using LibraryCatalog.Models;
+@model List<LibraryCatalog.Models.Book>
+
+<div class="container">
+<h1>Books:</h1>
+<h3>See all the books below:</h3>
+
+<hr/>
+
+<h3>Books:</h3>
+@if(@Model.Count == 0)
+{
+  <p>No books have been added yet</p>
+}
+else
+{
+  <ul>
+    @foreach(Book book in Model)
+    {
+      <li>@Html.ActionLink($"{recipe.Name}", "Details", new {id = recipe.RecipeId})</li>
+    }  
+  </ul>
+}
+
+<button>@Html.ActionLink("Add Recipe!", "Create")</button>
+<button>@Html.ActionLink("Home", "Index", "Home")</button>
+</div>

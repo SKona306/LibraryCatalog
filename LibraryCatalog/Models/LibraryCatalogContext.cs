@@ -1,8 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryCatalog.Models
 {
-  public class LibraryCatalogContext : DbContext
+  public class LibraryCatalogContext : IdentityDbContext<ApplicationUser>
   {
     public DbSet<Author> Author { get; set; }
     public DbSet<Book> Book { get; set; }

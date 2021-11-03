@@ -17,11 +17,11 @@ else
   <ul>
     @foreach(Book book in Model)
     {
-      <li>@Html.ActionLink($"{recipe.Name}", "Details", new {id = recipe.RecipeId})</li>
+      <li>@Html.ActionLink($"{book.Title}", "Details", new {id = book.BookId})</li>
     }  
   </ul>
 }
 
-<button>@Html.ActionLink("Add Recipe!", "Create")</button>
+<button>@Html.ActionLink("Add Book", "Create")</button>
 <button>@Html.ActionLink("Home", "Index", "Home")</button>
 </div>
